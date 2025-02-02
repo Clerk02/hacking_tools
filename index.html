@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Terminal</title>
+    <style>
+        body { background-color: black; color: lime; text-align: center; font-family: monospace; }
+        #console { border: 1px solid lime; padding: 10px; width: 80%; margin: auto; }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Hacker Terminal</h1>
+    <p>Type a command below:</p>
+    <div id="console">
+        <input type="text" id="command" placeholder="Enter command" style="width: 80%;">
+        <button onclick="runCommand()">Run</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function runCommand() {
+            var cmd = document.getElementById("command").value;
+            document.getElementById("output").innerText = "Executing: " + cmd;
+        }
+    </script>
+
+</body>
+</html>
